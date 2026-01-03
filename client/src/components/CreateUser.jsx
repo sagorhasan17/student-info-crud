@@ -1,11 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 const CreateUser = () => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
 const SubmitHandler = async e => {
   e.preventDefault();
@@ -19,6 +21,9 @@ const SubmitHandler = async e => {
         age: Number(age),
       }
     );
+    alert('User Created Successfully');
+    navigate('/');
+
 
     console.log('Success:', res.data);
 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const User = () => {
   const [users, setUsers] = useState([
@@ -10,6 +12,7 @@ const User = () => {
       age: 25,
     },
   ]);
+
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-100">

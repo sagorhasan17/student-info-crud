@@ -5,6 +5,13 @@ const createUserService = async payLoad => {
   return user;
 };
 
+// get all users
+const getUserService = async () => {
+  const users = await UserModel.find();
+  return users;
+};
+
 export const UserService = {
   createUserService,
+  getUserService,
 };
