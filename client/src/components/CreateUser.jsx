@@ -9,7 +9,7 @@ const CreateUser = () => {
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
 
-const SubmitHandler = async e => {
+const SubmitHandler = async (e) => {
   e.preventDefault();
 
   try {
@@ -55,6 +55,7 @@ const SubmitHandler = async e => {
                 type="text"
                 placeholder="Enter name"
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-green-400"
+                required
                 onChange={e => setName(e.target.value)}
               />
             </div>
@@ -68,6 +69,7 @@ const SubmitHandler = async e => {
                 type="email"
                 placeholder="Enter email"
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-green-400"
+                required
                 onChange={e => setEmail(e.target.value)}
               />
             </div>
@@ -81,6 +83,7 @@ const SubmitHandler = async e => {
                 type="number"
                 placeholder="Enter age"
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-green-400"
+                required
                 onChange={e => setAge(e.target.value)}
               />
             </div>

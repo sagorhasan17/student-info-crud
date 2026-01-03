@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/api/users', UserRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Server running');
+  res.send(`This Server is properly working on PORT no : ${process.env.PORT}`);
 });
 
 export default app;
